@@ -7,8 +7,10 @@ import (
 )
 
 func main() {
-	regex := ""
-	url := "https://www.youtube.com/watch?v=62dl2TxGQYw"
+
+	regex := "playerCaptionsTracklistRenderer.*?(https://www.youtube.com/api/timedtext.*?\")"
+	//regex := "/playerCaptionsTracklistRenderer.*?(youtube.com/api/timedtext.*?)\"/"
+	url := "https://www.youtube.com/watch?v=r7SO-Oq3d5E&t=1128s"
 	uri := request.ParseHTML(url, regex)
 
 	// find the URI with the use of regex plz

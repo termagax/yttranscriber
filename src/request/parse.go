@@ -13,5 +13,5 @@ func ParseHTML(url string, regex string) string {
 	}
 
 	vars.uri = string(vars.regex.FindString(vars.data))
-	return vars.uri
+	return format(vars.uri)
 }
