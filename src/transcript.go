@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"yttranscript/jsonops"
 	"yttranscript/request"
 )
@@ -14,7 +13,6 @@ func main() {
 	uri := request.ParseHTML(url, regex)
 
 	// find the URI with the use of regex plz
-	fmt.Println(uri)
 	jsonops.GetFromURI(uri)
 	jsonops.Parse()
 
