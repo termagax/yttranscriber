@@ -4,11 +4,12 @@ import (
 	"log"
 	"net/http"
 	"strings"
-	"transcriber/app"
+
+	"github.com/termagax/yttranscriber/cmd/app"
 )
 
 func transcriberApp(w http.ResponseWriter, r *http.Request) {
-	servePage(w, "transcriber.html", nil, r)
+	servePage(w, "templates/transcriber.html", nil, r)
 }
 
 func transcript(w http.ResponseWriter, r *http.Request) {
