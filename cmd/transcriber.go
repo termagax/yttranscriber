@@ -1,7 +1,7 @@
 package main
 
 import (
-	"transcriber/serve"
+	"github.com/termagax/yttranscriber/cmd/serve"
 )
 
 func main() {
