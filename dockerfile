@@ -1,11 +1,10 @@
-FROM golang:1.10
+FROM golang:1.14
 
+WORKDIR /go/src/app
 COPY . .
 
-RUN go get -d -v ./...
-
+RUN go get -d -vi ./...
 RUN go install -v ./...
+ 
 
-EXPOSE 8080
-
-CMD ["yttranscriber"]
+CMD go run ./cmd/transcriber.go
