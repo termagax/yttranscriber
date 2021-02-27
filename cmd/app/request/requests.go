@@ -9,13 +9,13 @@ import (
 func GetPage(url string) string {
 	resp, err := http.Get(url)
 	if err != nil {
-		// TODO: do something with this error
+		// TODO: handle error
 	}
 
 	defer resp.Body.Close()
 	html, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		// do something else lol
+		// TODO: handle error
 	}
 
 	return string(html)

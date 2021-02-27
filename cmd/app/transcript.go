@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/termagax/yttranscriber/cmd/app/request"
+	"github.com/termagax/yttranscriber/cmd/err"
 )
 
 // Transcribe ...
 func Transcribe(w http.ResponseWriter, url string) {
-	if request.LinkIsValid(url) {
-
-		raw := request.GetPage(url)
-		fmt.Fprintf(w, raw)
+	if err.LinkIsValid(url) {
+		fmt.Fprintf(w, finalTranscript(url))
+	} else {
+		// TODO: handle error
 	}
 }

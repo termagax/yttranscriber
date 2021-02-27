@@ -1,4 +1,4 @@
-package request
+package err
 
 import "net/url"
 
