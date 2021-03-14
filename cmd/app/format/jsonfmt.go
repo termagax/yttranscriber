@@ -1,6 +1,6 @@
 package format
 
 // JSON ...
-func JSON(json string, elems []string) string {
+func JSON(json string) string {
 	return "hello"
 }
