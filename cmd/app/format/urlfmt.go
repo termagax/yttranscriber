@@ -1,7 +1,7 @@
 package format
 
 // URL ...
-func URL(url []string) string {
+func URL(url string) string {
 
 	return "hello"
 }
